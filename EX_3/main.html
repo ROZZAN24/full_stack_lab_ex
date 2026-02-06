@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Login</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Quiz Login</h2>
+
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <input type="text" id="roll" placeholder="Enter Roll Number">
+
+    <button onclick="startQuiz()">Start Quiz</button>
+
+</div>
+
+
+<script>
+
+function startQuiz() {
+
+    let name = document.getElementById("name").value;
+    let roll = document.getElementById("roll").value;
+
+    if(name === "" || roll === "") {
+        alert("Please enter Name and Roll Number");
+        return;
+    }
+
+    
+    localStorage.setItem("studentName", name);
+    localStorage.setItem("rollNumber", roll);
+
+
+    window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>

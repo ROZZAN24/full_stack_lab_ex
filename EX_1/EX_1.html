@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>profile</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-black">
+
+<nav class="navbar navbar-expand-lg bg-warning sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#Home">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Projects">Projects</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">contacts</a>
+          <ul class="dropdown-menu bg-warning">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#phoneModal">Phone</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#gmailModal">Gmail</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#linkedinModal">LinkedIn</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#githubModal">GitHub</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<h1 class="text-center text-light mt-5 fs-1" id="Home">Welcome To My Profile</h1>
+<h3 class="text-center text-warning mt-4 fs-1">Roshan S</h3>
+
+<div class="border border-3 border-warning my-4"></div>
+
+<div class="d-flex justify-content-between align-items-center px-5">
+  <div class="text-center w-50">
+    <img src="./Gemini_Generated_Image_vw9cmevw9cmevw9c.png" class="img-fluid" width="450" alt="goffy">
+  </div>
+
+  <div class="w-50 fs-4 text-light">
+    <p>
+      I am a passionate Mobile Application Developer specializing in Flutter, focused on building high-performance,
+      cross-platform applications for Android. I enjoy designing clean user interfaces and implementing efficient
+      application logic using Dart. I have hands-on experience in developing responsive UI, multi-screen navigation,
+      and reusable components.<br><br>
+      I am continuously improving my skills by working on real-world projects such as quiz applications and
+      student-centric platforms. My goal is to become a professional app developer who creates scalable,
+      user-friendly, and impactful mobile applications using modern technologies.
+    </p>
+    <a href="./Roshan Resume .pdf" type="Download" target="_blank"><button type="button" class="btn btn-warning mt-3">Download Resume 📚</button></a>
+  </div>
+</div>
+
+<div class="border border-3 border-warning my-4"></div>
+<h1 class="text-center text-light mt-5 fs-1" id="skills">Skills</h1>
+
+<div class="d-flex justify-content-between text-light px-5 text-center mt-4">
+  <div class="w-50 fs-4">
+    <h4 class="text-center">Technical Skills</h4>
+    <p class="text-warning">
+      *Flutter application development using Dart <br>
+      *Designing responsive and adaptive user interfaces <br>
+      *Android app development fundamentals <br>
+      *Multi-screen navigation and state management (basic) <br>
+      *REST API integration (basic understanding)
+    </p>
+  </div>
+
+  <div class="w-50 fs-4">
+    <h4 class="text-center">UI/UX Skills</h4>
+    <p class="text-warning">
+      *Material Design implementation <br>
+      *Creating clean and user-friendly layouts <br>
+      *Using widgets for reusable UI components <br>
+      *Form validation and input handling
+    </p>
+  </div>
+</div>
+
+<br>
+
+<div class="d-flex justify-content-between text-light px-5 text-center">
+  <div class="w-50 fs-4">
+    <h4 class="text-center">Tools & Technologies</h4>
+    <p class="text-warning">
+      *Flutter SDK & Dart <br>
+      *Android Studio & VS Code <br>
+      *Git & GitHub (basic) <br>
+      *Bootstrap & HTML (for web basics)
+    </p>
+  </div>
+
+  <div class="w-50 fs-4">
+    <h4 class="text-center">Programming Concepts</h4>
+    <p class="text-warning">
+      *Object-Oriented Programming (OOP) <br>
+      *Basic data structures and logic building <br>
+      *Debugging and error handling
+    </p>
+  </div>
+</div>
+
+<div class="border border-3 border-warning my-4"></div>
+
+<h1 class="text-center text-light fs-1" id="Projects">Projects</h1>
+
+<div class="d-flex justify-content-around text-center px-5 mt-4">
+  <div class="w-50 fs-4 text-light">
+    <img src="./logo2.png" class="d-block mx-auto mb-3" width="250" alt="project1">
+    <h4>Quiz Application</h4>
+    <p class="text-warning">
+      The Quiz Application is an interactive mobile app designed to test users’ knowledge through multiple-choice
+      questions. It provides instant feedback, score calculation, and an engaging user interface to enhance the
+      learning experience. Developed using Flutter for smooth performance.
+    </p>
+  </div>
+
+  <div class="w-50 fs-4 text-light">
+    <img src="./logo1.png" class="d-block mx-auto mb-3" width="250" alt="project2">
+    <h4>Student Centric Platform</h4>
+    <p class="text-warning">
+      The Student Centric Platform is a comprehensive mobile application aimed at enhancing the educational
+      experience for students. It includes course management, assignment tracking, and collaboration tools.
+      Built using Flutter for seamless performance.
+    </p>
+  </div>
+</div>
+
+<div class="border border-3 border-warning my-4"></div>
+
+<div class="modal fade" id="phoneModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="./Gemini_Generated_Image_vw9cmevw9cmevw9c.png" class="img-fluid" width="450" alt="goffy">
+        <h5 class="modal-title">Phone</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">+91 93423 80508</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="gmailModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Gmail</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <img src="./Gemini_Generated_Image_vw9cmevw9cmevw9c.png" class="img-fluid" width="450" alt="goffy">
+      <div class="modal-body">roshansahayaraj2005@gmail.com</div>
+      <div class="modal-footer">
+        <a href="https://accounts.google.com/SignOutOptions?hl=en&continue=https://mail.google.com/mail/&service=mail&ec=GBRAFw"
+           class="btn btn-primary">Go</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="linkedinModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="./Gemini_Generated_Image_vw9cmevw9cmevw9c.png" class="img-fluid" width="450" alt="goffy">
+        <h5 class="modal-title">LinkedIn</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">Roshan (.R.S.) . S </div>
+      <div class="modal-footer">
+        <a href="https://www.linkedin.com/in/roshan-s-a2284a2b4" class="btn btn-primary">Go</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="githubModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="./Gemini_Generated_Image_vw9cmevw9cmevw9c.png" class="img-fluid" width="450" alt="goffy">
+        <h5 class="modal-title">GitHub</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">ROZZAN24</div>
+      <div class="modal-footer">
+        <a href="https://github.com/ROZZAN24" class="btn btn-primary">Go</a>
+      </div>
+    </div>
+  </div>
+</div> <br> <br>
+
+<div class="border border-3 border-warning my-4 bg-warning" style="height: 200px;">
+
+<div class="text-center py-3 bg-dark text-light mt-5">
+  <h1 class="mb-0">© 2026 Roshan S. | Built with bootstrap</h1> </div>
+
+
+
+</div>
+
+
+</body>
+</html>

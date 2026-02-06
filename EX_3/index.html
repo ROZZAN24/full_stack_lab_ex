@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Quiz App</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- External JS -->
+    <script src="script.js" defer></script>
+
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .quiz-title {
+            margin-top: 30px;
+            font-size: 50px;
+            height: 80px;
+            background: white;
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+            line-height: 80px;
+            border-radius: 40px;
+            font-weight: bold;
+            color: #5a3fa0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .quiz-box {
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            margin-top: 40px;
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        #question {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .option {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            background: #f3f4ff;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: #e0e3ff;
+        }
+
+        .option input {
+            margin-right: 12px;
+            transform: scale(1.2);
+        }
+
+        .btn-group {
+            margin-top: 25px;
+        }
+
+        button {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            margin: 8px;
+            font-size: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: left;
+            color: #5a3fa0;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2 class="quiz-title">Quizzes</h2>
+
+    <div class="quiz-box">
+
+        <h3 id="question"></h3>
+
+        <label class="option">
+            <input type="radio" name="option" value="0">
+            <span id="op1"></span>
+        </label>
+
+        <label class="option">
+            <input type="radio" name="option" value="1">
+            <span id="op2"></span>
+        </label>
+
+        <label class="option">
+            <input type="radio" name="option" value="2">
+            <span id="op3"></span>
+        </label>
+
+        <label class="option">
+            <input type="radio" name="option" value="3">
+            <span id="op4"></span>
+        </label>
+
+
+        <div class="btn-group">
+
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+
+            <!-- Hidden First -->
+            <button id="submit" style="display:none;">Submit</button>
+            <button id="restart" style="display:none;">Restart</button>
+
+        </div>
+
+        <!-- Result Area -->
+        <div id="result"></div>
+
+    </div>
+
+</body>
+</html>
