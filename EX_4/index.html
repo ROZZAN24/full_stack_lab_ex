@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+    <title>My Todo List</title>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 420px;
+            box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 14px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+
+        li {
+            background: #f5f7fa;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li:hover {
+            background: #e9f2ff;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        button {
+            padding: 7px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .add-btn {
+            background: #4facfe;
+            color: white;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .add-btn:hover {
+            background: #2f8cff;
+        }
+
+        .delete-btn {
+            background: #ff5c5c;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background: #e04343;
+        }
+
+        .task-text {
+            flex: 1;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body ng-controller="TodoController">
+
+<div class="container">
+
+<h2> My Todo List</h2>
+
+
+
+
+<select ng-model="statusFilter">
+    <option value="">All Tasks</option>
+    <option value="true">Completed</option>
+    <option value="false">Pending</option>
+</select>
+
+<ul>
+    <li ng-repeat="todo in todos | filter:{completed:statusFilter}">
+        <div style="display:flex;align-items:center;width:100%;">
+            <input type="checkbox" ng-model="todo.completed">
+
+            <span class="task-text"
+                  ng-class="{'completed':todo.completed}">
+                {{todo.work}}
+            </span>
+
+            <button class="delete-btn"
+                    ng-click="deleteTodo($index)">
+                Delete
+            </button>
+        </div>
+    </li>
+</ul>
+
+
+<input type="text"
+       ng-model="newWork"
+       placeholder="Add new task...">
+
+<button class="add-btn" ng-click="addNew()">Add Task</button>
+
+</div>
+
+</body>
+</html>
